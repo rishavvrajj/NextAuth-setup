@@ -1,16 +1,6 @@
-# NextAuth-setup
+# NextAuth-setup – Next.js 15 Auth.js + Prisma starter
 
-A clean Next.js 15 starter for authentication using Auth.js / NextAuth.js, Prisma (Postgres + PrismaPg adapter), and protected routes via a proxy/middleware pattern. Use this as a reference to wire the same setup into your own Next.js App Router app.
-
----
-
-## Stack
-
-- Next.js 15 (App Router)
-- Auth.js / NextAuth.js v5 (`next-auth@beta`)
-- Prisma ORM + Prisma Postgres + `@prisma/adapter-pg`
-- Tailwind CSS
-- TypeScript
+A clean Next.js 15 App Router starter for authentication using Auth.js / NextAuth.js, Prisma (Postgres + PrismaPg adapter), and protected routes via a proxy/middleware pattern. Use this as a reference to wire the same setup into your own Next.js application.
 
 ---
 
