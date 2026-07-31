@@ -5,10 +5,6 @@ import { logIn } from '../../../lib/auth'
 
 export default function SignInButton() {
 
-    const handleLogin = () => {
-        logIn();
-    };
-
     return (
         <button
             type="button"

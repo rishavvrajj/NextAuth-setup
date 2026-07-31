@@ -65,14 +65,14 @@ export default async function Home() {
         <p className="mt-6 text-center text-xs leading-5 text-zinc-500">
           By signing in, you agree to our{' '}
           <Link
-            href="/terms"
+            href="/"
             className="text-indigo-400 transition-colors hover:text-indigo-300"
           >
             Terms of Service
           </Link>{' '}
           and{' '}
           <Link
-            href="/privacy"
+            href="/"
             className="text-indigo-400 transition-colors hover:text-indigo-300"
           >
             Privacy Policy
