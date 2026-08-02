@@ -2,8 +2,12 @@
 
 import { signIn, signOut } from "@/auth";
 
-export const logIn = async () => {
+export const githublogIn = async () => {
     await signIn("github", {redirectTo: '/user'})
+}
+
+export const googlelogIn = async () => {
+    await signIn("google", {redirectTo: '/user'})
 }
 
 export const logOut = async () => {

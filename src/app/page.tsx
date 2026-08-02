@@ -3,8 +3,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { auth } from '@/auth'
-import SignInButton from './components/SignInButton'
-import SignOutButton from './components/SignOutButton'
+
+import GoogleSignInButton from '@/components/GoogleSignInButton'
+import GitHubSignInButton from '../components/GithubSignInButton'
+
+import SignOutButton from '../components/SignOutButton'
 
 export default async function Home() {
   
@@ -59,7 +62,8 @@ export default async function Home() {
         </div>
 
         <div className="mt-8">
-          <SignInButton />
+          <GitHubSignInButton />
+          <GoogleSignInButton />
         </div>
 
         <p className="mt-6 text-center text-xs leading-5 text-zinc-500">

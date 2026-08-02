@@ -1,15 +1,19 @@
 'use client'
 
 import React from 'react'
-import { logIn } from '../../../lib/auth'
+import { githublogIn } from '../../lib/auth';
 
-export default function SignInButton() {
+export default function GitHubSignInButton() {
+
+    const handleLogIn = () => {
+        githublogIn();
+    };
 
     return (
         <button
             type="button"
-            onClick={() => logIn()}
-            className="mt-8 w-full rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-black"
+            onClick={handleLogIn}
+            className="w-full my-3 cursor-pointer rounded-xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-black"
         >
             <span className="flex items-center justify-center gap-3">
                 <svg

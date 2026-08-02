@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { auth } from '@/auth'
-import SignOutButton from '../components/SignOutButton'
+import SignOutButton from '../../components/SignOutButton'
 import Link from 'next/link'
 
 export default async function user() {

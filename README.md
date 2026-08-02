@@ -45,7 +45,11 @@ Edit `prisma/schema.prisma`:
 ```prisma
 generator client {
   provider = "prisma-client"
+<<<<<<< HEAD
   output   = "../app/generated/prisma"
+=======
+  output   = "../src/generated/prisma"
+>>>>>>> 6b48601 (feat: implement Google and GitHub sign-in buttons, update authentication flow)
 }
 
 datasource db {
@@ -138,7 +142,11 @@ export default defineConfig({
 
 ```ts
 // lib/prisma.ts
+<<<<<<< HEAD
 import { PrismaClient } from "../app/generated/prisma/client";
+=======
+import { PrismaClient } from "../src/generated/prisma/client";
+>>>>>>> 6b48601 (feat: implement Google and GitHub sign-in buttons, update authentication flow)
 import { PrismaPg } from "@prisma/adapter-pg";
 
 const adapter = new PrismaPg({
@@ -174,7 +182,11 @@ AUTH_GITHUB_SECRET=<YOUR_GITHUB_CLIENT_SECRET>
 Generate `AUTH_SECRET` via:
 
 ```bash
+<<<<<<< HEAD
 npx auth secret --copy
+=======
+npx auth secret
+>>>>>>> 6b48601 (feat: implement Google and GitHub sign-in buttons, update authentication flow)
 ```
 
 Create a GitHub OAuth app with:
@@ -461,7 +473,11 @@ export default async function User() {
               />
             ) : (
               <div className="flex h-18 w-18 items-center justify-center rounded-full bg-white/10 text-lg font-semibold text-white">
+<<<<<<< HEAD
                 {user.name?.?.toUpperCase() ?? "U"}
+=======
+                {user.name?.toUpperCase() ?? "U"}
+>>>>>>> 6b48601 (feat: implement Google and GitHub sign-in buttons, update authentication flow)
               </div>
             )}
 
