@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextAuth",
+  title: {
+    default: "NextAuth",
+    template: "%s | NextAuth",
+  },
   description:
     "Secure authentication example built with Next.js 15 and NextAuth, including protected routes, sessions, and modern UI.",
   keywords: [
@@ -32,11 +35,30 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NextAuth",
     description:
-      "Complete authentication flow using Next.js 15 App Router and NextAuth, with sign-in, sign-out, and protected pages.",
-    // url: "https://your-deployment-url.com",
+      "Secure authentication example built with Next.js 15 and NextAuth, including protected routes, sessions, and modern UI.",
+    url: "https://next-auth-setup-iota.vercel.app/",
+    siteName: "NextAuth",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 700,
+        height: 450,
+        alt: "NextAuth",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
-  // metadataBase: new URL("https://your-deployment-url.com"),
+  twitter: {
+    card: "summary_large_image",
+    title: "NextAuth",
+    description:
+      "Secure authentication example built with Next.js 15 and NextAuth, including protected routes, sessions, and modern UI.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default async function RootLayout({
@@ -44,17 +66,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const session = await auth();
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <SessionProvider session={session}>
-          {children}
-        </SessionProvider>
+        <SessionProvider session={session}>{children}</SessionProvider>
       </body>
     </html>
   );
