@@ -31,6 +31,7 @@ CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "name" TEXT,
     "email" TEXT,
+    "password" TEXT,
     "email_verified" TIMESTAMP(3),
     "image" TEXT,
 

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { logOut } from '../../lib/auth'
+import { logOut } from '../../../lib/auth'
 
 export default function SignOutButton() {
   
