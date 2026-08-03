@@ -22,6 +22,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: {
     strategy: "jwt",
   },
+  pages: {
+    signIn: "/"
+  },
   providers: [
     GitHub({
       clientId: process.env.AUTH_GITHUB_ID!,
