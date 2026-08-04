@@ -9,16 +9,16 @@ import { compare } from "bcrypt";
 
 const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL!,
-});
-
-const prisma = new PrismaClient({ adapter });
-
-class InvalidLoginError extends CredentialsSignin {
-  code = "Invalid identifier or password";
-}
-
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  });
+  
+  const prisma = new PrismaClient({ adapter });
+  
+  class InvalidLoginError extends CredentialsSignin {
+    code = "Invalid identifier or password";
+    }
+    
+    export const { handlers, auth, signIn, signOut } = NextAuth({
+      adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
   },

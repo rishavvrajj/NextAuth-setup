@@ -22,7 +22,7 @@ export default function Login() {
   }, [status, router]);
   
   return (
-    <main className="min-h-screen flex items-center justify-center bg-zinc-100 p-4">
+    <main className="min-h-screen flex items-center justify-center bg-zinc-100 p-4" style={{ backgroundImage:"url('/image.png')", backgroundPosition:'center',backgroundRepeat:'no-repeat', backgroundSize:'Cover'}}>
       <div className="max-w-6xl overflow-hidden rounded-3xl border-2 border-zinc-300 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.10),0_12px_40px_rgba(0,0,0,0.10)]">
         <div className="flex lg:min-h-[90vh] flex-col lg:flex-row">
           
@@ -36,7 +36,7 @@ export default function Login() {
           </div>
 
           {/* Right Side */}
-          <div className="flex relative w-full lg:w-1/2 m-2 items-center justify-center p-6 lg:p-10">
+          <div className="flex relative w-full lg:w-1/2 items-center justify-center p-6 lg:p-10">
             <div className="w-full max-w-lg">
               <CredentialSignInButton />
 
